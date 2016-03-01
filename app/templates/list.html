@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h3>Category</h3>
+<div class="main">
+
+    <div class="cathegory">
+    <table>
+         {% for category in categories %}
+             <tr>
+
+                                  <td id = "discription">{{ category.name }}{{ category.id }}</td>
+                                  <td > <a class="btn btn-default" href = "{{ url_for('edit_category', category_id=category.id)}}">edit</a></td>
+                                  <td ><form action ="{{ url_for('delete_category', category_id=category.id)}}" method="post">
+                                      <input class ="btn btn-mini btn-danger" type="submit" name="delete_category" value="delete"></form></td>
+
+             </tr>
+         {% endfor %}
+     </table>
+    </div>
+    <div class="list">
+    <h3>My TODOs</h3>
+       <table>
+           <tr>
+               <th>#</th>
+               <th>Description</th>
+               <th>Category</th>
+               <th>Priority</th>
+               <th>Creation date</th>
+           </tr>
+           {% for todo in todos %}
+               <tr>
+                   <td id ="index">{{ loop.index }} </td>
+
+                   <td id ="descript">{{ todo.description }}</td>
+
+                   <td id ="category">{{ todo.category.name }}</td>
+                   <td id ="priority">{{ todo.priority.name }}</td>
+                   <td id ="date">{{ todo.creation_date }}
+
+                   <td> <a class="btn btn-info" href = "{{ url_for('new')}}">edit</a></td>
+                   <td> <form action ="{{ url_for('delete_todo', todo_id=todo.id)}}" method="post">
+                        <input class ="btn btn-mini btn-danger" type="submit" name="delete_todo" value="delete"> </form></td>
+
+                   <td> <a class="btn btn-success" href = "{{ url_for('new')}}">done</a></td>
+
+
+
+                 </tr>
+           {% endfor %}
+       </table>
+        </div>
+</div>
+
+        {% endblock %}

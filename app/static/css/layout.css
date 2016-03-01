@@ -1,0 +1,65 @@
+.navbar-inverse{
+    background-color: black;
+   
+}
+
+.main{
+    display: flex;
+    padding-left: 5px;
+}
+
+.cathegory{
+    background-color: #d5ceff;
+    width: 300px;
+    border: 2px solid #8480ff;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.list {
+    padding-left: 50px;
+}
+#discription{
+      width: 150px;
+}
+
+p{
+    padding-top: 60px;
+    text-align: center;
+}
+#index{
+    padding-right: 5px;
+     width: 20px;
+}
+#descript {
+    padding-right: 5px;
+    width: 300px;
+}
+#category{
+    padding-right: 5px;
+    width: 100px;
+}
+#priority {
+    padding-right: 5px;
+    width: 100px;
+}
+#date {
+    padding-right: 5px;
+    width: 100px;
+}
+div.main div.list table tr td{
+    border-bottom: 1px solid lightgray;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-top: 1px solid lightgray;
+
+}
+div.main div.list table tr th{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 5px;
+}
+div.main div.cathegory table tr td{
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
